@@ -36,21 +36,26 @@ https://better-call.dev/ghostnet/KT1McssP2KyxZttN8UPGGfH5VNeQgrpNK7EG/operations
 ## Milestone 2:
 Use Taquito.js to create a UI for the Escrow contract, including a form for depositing funds into the escrow account and a button for claiming funds. Test the UI by depositing funds from both parties into the escrow account.
 
-[/]  form for depositing funds into the escrow account - TO DO
-[/]  button for claiming funds - TO DO
-[/]  test by depositing funds from both parties into the escrow account -TO DO
+[/]  form for depositing funds into the escrow account
+
+[/]  button for claiming funds
+
+[/]  test by depositing funds from both parties into the escrow account
 
 ## Milestone 3:
 Implement the functionality for claiming funds by both parties. This involves creating functions in Taquito.js that call the appropriate entry points in the Escrow contract and passing the correct parameters.
 
-[/] Implement the functionality for claiming funds by both parties - TODO
+[/] Implement the functionality for claiming funds by both parties
 
 ## Milestone 4:
 Implement the ability for the admin to revert funds from the contract in case both parties accept to withdraw the escrow. This involves adding a new entry point to the Escrow contract that can only be called by the admin, and modifying the existing entry points to include a check for whether the admin has authorized the withdrawal. In the frontend application, create a new button and form that allows the admin to initiate the fund reversion process. This should involve sending a transaction to the Escrow contract with the appropriate parameters. Once the admin has authorized the withdrawal, the funds should be returned to their respective parties. This milestone requires a deeper understanding of the Escrow contract and may be more challenging than the previous milestones. It is important to thoroughly test the contract and frontend application to ensure that everything is working correctly.
 
 [/] Implement the ability for the admin to revert funds
+
 [/] adding a new entry point to the Escrow contract that can only be called by the admin
+
 [/] modifying the existing entry points to include a check for whether the admin has authorized the withdrawal
+
 [/] create a new button and form that allows the admin to initiate the fund reversion process
 
 
@@ -67,22 +72,22 @@ Implement additional features, such as error handling, confirmation messages, an
 - Only authorised people can see the buttons and functionalities for their respective accounts
     1. When wallet is connected, only the set **admin** in the contract  can see the `Allow Revert Funds`, and `Revert Funds` buttons 
 
-        <img src="documentation/admin_2.png" height="200">
+        <img src="documentation/admin_2.png" width="300">
 
     2. When wallet is connected, only the set **owner** and **counterparty** in the contract can see their respective `Deposit Funds`, `Claim Total Fund` and `Allow Revert Funds` functionalities
 
         | Owner | Counterparty |
         |:-----:|:------------:|
-        |<img src="documentation/owner_1.png" height="200">|<img src="documentation/counterparty_1.png" height="200">|
-        |<img src="documentation/owner_2.png" height="200">|<img src="documentation/counterparty_2.png" height="200">|
-        |<img src="documentation/owner_3.png" height="200">|<img src="documentation/counterparty_3.png" height="200">|
+        |<img src="documentation/owner_1.png" width="300">|<img src="documentation/counterparty_1.png" width="300">|
+        |<img src="documentation/owner_2.png" width="300">|<img src="documentation/counterparty_2.png" width="300">|
+        |<img src="documentation/owner_3.png" width="300">|<img src="documentation/counterparty_3.png" width="300">|
 
     
 - Added Total Escrow Balance to keep track of the amount.
 - Added front-end restriction to only let admin allow reverting funds when both parties has deposited funds 
 
-    <img src="documentation/admin_1.png" height="200">
+    <img src="documentation/admin_1.png" width="300">
 - Added front-end restriction so that only Owner can add balance to Counterparty and vice versa
 - Added front-end restriction to only allow claiming of funds when both parties has deposited
 
-    <img src="documentation/counterparty_4.png" height="200">
+    <img src="documentation/counterparty_4.png" width="300">
