@@ -86,7 +86,7 @@ const App = () => {
   const onAddBalanceOwner = async () => {
     try {
       setAddBalanceOwnerLoading(true)
-      await addBalanceOwner(inputDepositFromCounterparty)
+      await addBalanceOwner(inputDepositFromOwner)
       alert("Transaction successful")
     } catch (err) {
       throw err;
@@ -97,7 +97,7 @@ const App = () => {
   const onAddBalanceCounterparty = async () => {
     try {
       setAddBalanceCounterpartyLoading(true)
-      await addBalanceCounterparty(inputDepositFromOwner)
+      await addBalanceCounterparty(inputDepositFromCounterparty)
       alert("Transaction successful")
     } catch (err) {
       throw err;
@@ -249,7 +249,7 @@ const App = () => {
                 <div>
                   {account == owner ? (
                     <div>
-                      {balanceCounterparty == fromCounterparty ?
+                      {balanceOwner == fromOwner ?
                         (
                           <div>
                             <h6>Secret Hash:</h6>
@@ -266,9 +266,9 @@ const App = () => {
                           </div>
                         ) : (
                           <div>
-                            <h6>Fund to deposit: {parseInt(fromCounterparty) / 1000000} tez</h6>
+                            <h6>Fund to deposit: {parseInt(fromOwner) / 1000000} tez</h6>
                             <input type="number" class="form-control" id="inputBalance" onChange={getFromOwnerDeposit} aria-describedby="emailHelp" placeholder="Enter amount in tez"></input>
-                            <button onClick={onAddBalanceCounterparty} class="btn btn-primary mt-md-3 px-md-5 py-md-2">
+                            <button onClick={onAddBalanceOwner} class="btn btn-primary mt-md-3 px-md-5 py-md-2">
                               {addBalanceCounterpartyLoading ? "Loading.." : "Deposit Fund"}
                             </button>
                           </div>
@@ -304,7 +304,7 @@ const App = () => {
                   <div>
                     {account == counterparty ? (
                       <div>
-                        {balanceOwner == fromOwner ?
+                        {balanceCounterparty == fromCounterparty ?
                           (
                             <div>
                               <h6>Secret Hash:</h6>
@@ -321,9 +321,9 @@ const App = () => {
                             </div>
                           ) : (
                             <div>
-                              <h6>Fund to deposit: {parseInt(fromOwner) / 1000000} tez</h6>
+                              <h6>Fund to deposit: {parseInt(fromCounterparty) / 1000000} tez</h6>
                               <input type="number" class="form-control" onChange={getFromCounterpartyDeposit} id="inputBalance" aria-describedby="emailHelp" placeholder="Enter amount in tez"></input>
-                              <button onClick={onAddBalanceOwner} class="btn btn-primary mt-md-3 px-md-5 py-md-2">
+                              <button onClick={onAddBalanceCounterparty} class="btn btn-primary mt-md-3 px-md-5 py-md-2">
 
                                 {addBalanceOwnerLoading ? "Loading.." : "Deposit Fund"}
                               </button>
