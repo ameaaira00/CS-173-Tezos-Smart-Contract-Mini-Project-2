@@ -5,6 +5,8 @@ The Escrow contract is a simple contract that allows two parties (owner and coun
 
 > The Escow.py was modified to apply all milestone requirements
 
+> Check Milestone 5 for project screenshots.
+
 # Project Milestones:
 ## ✅ Milestone 1:
 ☑️ Set up the development environment, install dependencies, and deploy the Escrow contract using SmartPy. Verify that the contract has been deployed successfully by reading the contract storage.
@@ -72,6 +74,8 @@ Implement additional features, such as error handling, confirmation messages, an
 - Only authorised people can see the buttons and functionalities for their respective accounts
     1. When wallet is connected, only the set **admin** in the contract  can see the `Allow Revert Funds`, and `Revert Funds` buttons 
 
+        
+        <img src="documentation/admin_3.png" width="300">
         <img src="documentation/admin_2.png" width="300">
 
     2. When wallet is connected, only the set **owner** and **counterparty** in the contract can see their respective `Deposit Funds`, `Claim Total Fund` and `Allow Revert Funds` functionalities
@@ -81,6 +85,8 @@ Implement additional features, such as error handling, confirmation messages, an
         |<img src="documentation/owner_1.png" width="300">|<img src="documentation/counterparty_1.png" width="300">|
         |<img src="documentation/owner_2.png" width="300">|<img src="documentation/counterparty_2.png" width="300">|
         |<img src="documentation/owner_3.png" width="300">|<img src="documentation/counterparty_3.png" width="300">|
+        |<img src="documentation/owner_4.png" width="300">|<img src="documentation/counterparty_4.png" width="300">|
+        |<img src="documentation/owner_5.png" width="300">|<img src="documentation/counterparty_5.png" width="300">|
 
     
 - Added Total Escrow Balance to keep track of the amount.
